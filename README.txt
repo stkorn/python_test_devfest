@@ -6,15 +6,10 @@ Open http://localhost:8000 in browser
 1. Open a Terminal (or Command Prompt)
 Navigate to the root directory of this project where this file is located:
 
-bash
-
-
 cd path/to/submit_python_test
+
 2. Create the Virtual Environment
 Create a new virtual environment named venv. (Note: You need to have Python 3 installed on your device)
-
-bash
-
 
 # On Mac/Linux:
 python3 -m venv venv
@@ -22,9 +17,6 @@ python3 -m venv venv
 python -m venv venv
 3. Activate the Virtual Environment
 You must activate the virtual environment every time you work on the project or run the server.
-
-bash
-
 
 # On Mac/Linux:
 source venv/bin/activate
@@ -37,14 +29,8 @@ venv\Scripts\Activate.ps1
 4. Install Dependencies
 With the virtual environment activated, install the required packages (like FastAPI and Uvicorn):
 
-bash
-
-
 pip install -r requirements.txt
 5. Run the Server
 Start the FastAPI server:
-
-bash
-
 
 uvicorn backend.bookingapi:app --reload --port 8000
