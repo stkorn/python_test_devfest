@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking App</title>
+    <meta name="description" content="Simple Hackathon Appointment Booking App">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="app-container">
+        <div id="login-view" class="view active">
+            <div class="glass-card">
+                <h1>Welcome Back</h1>
+                <p>Please login to continue</p>
+                <form id="login-form">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" required placeholder="as admin or user1, user2, user3">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required placeholder="as password">
+                    </div>
+                    <button type="submit" class="btn-primary">Login</button>
+                </form>
+                <div id="login-error" class="error-msg"></div>
+            </div>
+        </div>
+
+        <div id="dashboard-view" class="view">
+            <nav class="navbar glass-card">
+                <h2>Booking Dashboard</h2>
+                <div class="nav-right">
+                    <span id="user-role-badge" class="badge"></span>
+                    <button id="logout-btn" class="btn-secondary">Logout</button>
+                </div>
+            </nav>
+
+            <main class="dashboard-content">
+                <section class="glass-card new-booking-section">
+                    <h3>Book an Appointment</h3>
+                    <form id="booking-form">
+                        <div class="input-group">
+                            <label for="start-time">Start Time</label>
+                            <input type="time" id="start-time" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="end-time">End Time</label>
+                            <input type="time" id="end-time" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Book Now</button>
+                    </form>
+                </section>
+
+                <section class="glass-card bookings-list-section">
+                    <h3>Your Bookings <span id="admin-notice" style="display:none; font-size: 0.8rem; color: #ffeb3b;">(Admin: Viewing All)</span></h3>
+                    <ul id="bookings-list"></ul>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script src="/app.js"></script>
+</body>
+</html>
