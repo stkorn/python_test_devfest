@@ -1,7 +1,4 @@
-Start FastAPI server:
-source venv/bin/activate && uvicorn backend.bookingapi:app --reload --port 8000
-
-Open http://localhost:8000 in browser
+How to Setup
 
 1. Open a Terminal (or Command Prompt)
 Navigate to the root directory of this project where this file is located:
